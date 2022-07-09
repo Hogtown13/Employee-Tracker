@@ -1,4 +1,4 @@
-const { builtinModules } = require("module");
+import { builtinModules } from 'module';
 
 class Role {
     constructor(id, title, salary, deptId){
@@ -21,4 +21,4 @@ class Role {
     }
 }
 
-module.exports = Role;
+    export default Role;

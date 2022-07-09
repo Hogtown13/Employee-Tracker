@@ -1,5 +1,5 @@
-const { MAX_UNSIGNED_VALUE } = require('long');
-const Employee = require('./employee')
+
+import Employee from './employee.js';
 
 class Department{
     constructor(id, name){
@@ -14,4 +14,4 @@ class Department{
     }
 }
 
-module.exports = Department;
+    export default Department;
