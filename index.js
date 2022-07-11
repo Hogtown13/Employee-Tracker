@@ -4,7 +4,7 @@ import Role from './config/role.js'
 import connect from './config/connect.js'
 import mySql from 'mysql2'
 import prompt from 'inquirer'
-import cTable from 'console.table'
+import table from 'console.table'
 
 
 connect.connect((err) => {
@@ -27,40 +27,42 @@ function view() {
             'Add an Employee'
         ]
     }]) 
-        .then( (answers) => {
-
-        
+        .then((answers) => {
+            const { choices } = answers;
             switch (answers) {
-                case answers.view = 'view all Departments':
+                case choices === 'view all Departments':
                     viewAllDepartments();
                     break;
 
-                case answers.view = 'view all Roles':
+                case choices === 'view all Roles':
                     viewAllRoles();
                     break;
 
-                case answers.view = 'view all Employees':
+                case choices === 'view all Employees':
                     viewAllEmployees();
                     break;
 
-                case answers.view = 'Add a Department':
+                case choices === 'Add a Department':
                     addDepartment();
                     break;
 
-                case answers.view = 'Add a Role':
+                case choices === 'Add a Role':
                     addRole();
                     break;
 
-                case answers.view = 'Add an Employee':
+                case choices === 'Add an Employee':
                     addEmployee();
                     break;
-            }
-        });
-        
+        } 
+    });
+
+    //view();
+
 };
 
-view();
 
-
+const viewAllDepartments = () => {
+    console.table(Department.id.name)
+};
 
     
