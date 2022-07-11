@@ -14,4 +14,8 @@ class Department{
     }
 }
 
+const viewAllDepartments = () => {
+    
+}
+
     export default Department;
