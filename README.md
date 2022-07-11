@@ -23,3 +23,6 @@ Clone the repo to your local machine, `npm i console.table mysql2 inquirer` then
 
 <img src= 'assets/images/Screen Shot 2022-07-10 at 9.38.56 PM.png'>
 
+## Demo
+https://drive.google.com/file/d/1cp3ZwzoDKRvu59wPxSlv3gV6ZL3Decd1/view
+
